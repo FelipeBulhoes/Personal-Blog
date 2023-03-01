@@ -1,0 +1,15 @@
+
+:root{
+    --body-color: #161616;
+    --sidebar-color: #FFF;
+    --primary-color: #4248f5; 
+    --secondary-color: #DDDDDD;
+    --light-primary-color: #1A1A1A;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    --trans-02: all 0.2s ease;
+    --trans-03: all 0.3s ease;
+    --trans-04: all 0.4s ease;
+    --trans-05: all 0.5s ease;
+}
