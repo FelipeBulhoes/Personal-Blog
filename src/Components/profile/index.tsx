@@ -4,6 +4,7 @@ import { engLanguage, ptLanguage } from '../../languages';
 
 interface iProfileProps {
     language: string;
+    observingElement: any;
 }
 
 interface iLanguageTexts {
@@ -11,7 +12,7 @@ interface iLanguageTexts {
     impactfullPhrase: string
 }
 
-const Profile = ({language}: iProfileProps) => {
+const Profile = ({language, observingElement}: iProfileProps) => {
 
     
     let languagePack:iLanguageTexts = {
@@ -30,9 +31,9 @@ const Profile = ({language}: iProfileProps) => {
         <ProfileDiv>
             <div className='self-presentation'>
                 <img src="./profile.png" alt="profile" />
-                <span>{languagePack.selfPresentation}</span>
+                <span ref={(el) => {observingElement.current[0] = el}} className="hidden">{languagePack.selfPresentation}</span>
             </div>
-            <div className='role'>
+            <div className='role hidden' ref={(el) => {observingElement.current[1] = el}}>
                 <h1>{languagePack.impactfullPhrase}</h1>
             </div>
         </ProfileDiv>

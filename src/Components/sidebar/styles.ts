@@ -8,7 +8,6 @@ export const SidebarNav = styled.nav`
     align-items: center;
     padding: 0 12% 0 12%;
     box-shadow: 3px 3px 8px 2px #888888;
-    position: absolute;
 
     .langs {
         position: relative;

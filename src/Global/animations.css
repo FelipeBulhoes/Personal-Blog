@@ -1,0 +1,44 @@
+.hidden {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-100%);
+    transition: 1.4s;
+  }
+
+  .hidden2 {
+    opacity: 0;
+    filter: blur(3px);
+    transition: 2s;
+  }
+
+  .animate {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: 1.4s;
+  }
+
+  .animate2 {
+    opacity: 1;
+    filter: blur(0);
+    transition: 2s;
+    animation: bounce 1s linear;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(-250px)
+    }
+    20%, 50%, 80%, to {
+      transform: translateY(0)
+    }
+    40% {
+      transform: translateY(-30px)
+    }
+    70% {
+      transform: translateY(-15px)
+    }
+    90% {
+      transform: translateY(-4px)
+    }
+  }

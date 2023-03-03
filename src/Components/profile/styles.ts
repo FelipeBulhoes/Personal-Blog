@@ -4,11 +4,9 @@ export const ProfileDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: 140px;
 
     .self-presentation {
-        padding: 50px 0 20px 0;
+        padding: 50px 0 25px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -19,7 +17,8 @@ export const ProfileDiv = styled.div`
 
         img {
             width: 130px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            -webkit-animation: photoAnimation 5s;
         }
     }
 
@@ -37,6 +36,11 @@ export const ProfileDiv = styled.div`
             font-size: 36px;
             text-align: center;
         }
+    }
+
+    @keyframes photoAnimation {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
     }
 
     @media (max-width: 720px) {
