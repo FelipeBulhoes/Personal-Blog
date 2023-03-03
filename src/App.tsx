@@ -5,6 +5,7 @@ import Sidebar from './Components/sidebar';
 import Profile from './Components/profile';
 import Technologies from './Components/technologies';
 import AboutMe from './Components/aboutme';
+import Projects from './Components/projects';
 
 function App() {
   const [language, setLanguage] = useState("English");
@@ -44,6 +45,7 @@ function App() {
           <Profile language={language} observingElement={observingElement}></Profile>
           <Technologies observingElement={observingElement}></Technologies>
           <AboutMe language={language}></AboutMe>
+          <Projects language={language} observingElement={observingElement}></Projects>
         </div>
     </main>
   );

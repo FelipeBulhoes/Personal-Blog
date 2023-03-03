@@ -9,7 +9,7 @@ export const AboutMeDiv = styled.div`
     flex-direction: column;
 
     img {
-        margin: 0 auto 30px auto;
+        margin: 20px auto 50px auto;
     }
 
     h2 {

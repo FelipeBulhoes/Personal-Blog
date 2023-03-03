@@ -6,7 +6,7 @@ export const ProfileDiv = styled.div`
     align-items: center;
 
     .self-presentation {
-        padding: 50px 0 25px 0;
+        padding: 30px 0 35px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
