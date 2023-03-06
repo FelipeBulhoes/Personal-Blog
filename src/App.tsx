@@ -6,6 +6,7 @@ import Profile from './Components/profile';
 import Technologies from './Components/technologies';
 import AboutMe from './Components/aboutme';
 import Projects from './Components/projects';
+import Skills from './Components/skills';
 
 function App() {
   const [language, setLanguage] = useState("English");
@@ -46,6 +47,10 @@ function App() {
           <Technologies observingElement={observingElement}></Technologies>
           <AboutMe language={language}></AboutMe>
           <Projects language={language} observingElement={observingElement}></Projects>
+          <div className='work-in-progress'>
+            <img src="./work-in-progress.png" alt="" />
+          </div>
+          <Skills></Skills>
         </div>
     </main>
   );
