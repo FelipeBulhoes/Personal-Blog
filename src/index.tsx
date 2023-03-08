@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import ErrorPage from './error-page';
 import PandaCooking from './routes/panda-cooking';
+import NuKenzie from './routes/nu-kenzie';
+import KenzieBurguer from './routes/kenzie-burguer';
 import App from './App';
 
 const router = createBrowserRouter([
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
   {
     path: "projects/panda-cooking",
     element: <PandaCooking />
+  },
+  {
+    path: "projects/nu-kenzie",
+    element: <NuKenzie />
+  },
+  {
+    path: "projects/kenzie-burguer",
+    element: <KenzieBurguer />
   },
 ]);
 

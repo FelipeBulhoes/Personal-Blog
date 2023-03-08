@@ -1,8 +1,6 @@
 import styled from "styled-components"
 
-export const PandaCookingMain = styled.main`
-    background: rgb(255,201,201);
-    background: linear-gradient(0deg, rgba(255,201,201,1) 0%, rgba(255,255,255,1) 100%);
+export const ProjectsMain = styled.main`
     height: 100vh;
 
     h2, p {
@@ -44,14 +42,13 @@ export const PandaCookingMain = styled.main`
 
             .move {
                 display: flex;
-                width: 25%;
+                width: 35%;
                 flex-direction: row;
                 justify-content: space-between;
 
                 button {
                     display: flex;
                     align-items: center;
-                    width: 130px;
                     padding: 10px 20px;
                     background-color: transparent;
                     border: 1px solid white;

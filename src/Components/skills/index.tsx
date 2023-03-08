@@ -14,11 +14,11 @@ function Skills() {
                 <div className='card'>
                     <img src="./placeholder.jpg" alt="" />
                 </div>
-                <div className='card'>
+                <div className='card' onClick={() => navigate("/projects/kenzie-burguer")}>
                     <span>Ver mais</span>
                     <img src="./kenzieburguer.png" alt="" />
                 </div>
-                <div className='card'>
+                <div className='card' onClick={() => navigate("/projects/nu-kenzie")}>
                     <span>Ver mais</span>
                     <img src="./nukenzie.png" alt="" />
                 </div>
