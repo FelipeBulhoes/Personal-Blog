@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SidebarNav } from "./styles";
 import { CiMail } from "react-icons/ci"
+import { LanguageContext } from "../../contexts/languageContext";
 
-interface iLanguages {
-    setLangPortuguese: () => void,
-    setLangEnglish: () => void
-}
+const Sidebar = () => {
+    const {setLangEnglish, setLangPortuguese} = useContext(LanguageContext);
 
-const Sidebar = ({setLangPortuguese, setLangEnglish}: iLanguages) => {
     return (
         <SidebarNav>
             <header>

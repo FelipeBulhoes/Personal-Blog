@@ -1,9 +1,10 @@
 import React from 'react'
 import { ProfileDiv } from './styles'
+import { useContext } from 'react';
 import { engLanguage, ptLanguage } from '../../languages';
+import { LanguageContext } from '../../contexts/languageContext';
 
 interface iProfileProps {
-    language: string;
     observingElement: any;
 }
 
@@ -12,14 +13,15 @@ interface iLanguageTexts {
     impactfullPhrase: string
 }
 
-const Profile = ({language, observingElement}: iProfileProps) => {
-
+const Profile = ({observingElement}: iProfileProps) => {
+    const {language} = useContext(LanguageContext)
     
     let languagePack:iLanguageTexts = {
         selfPresentation: "",
         impactfullPhrase: ""
     }
 
+    
     if(language === "English") {
         languagePack = engLanguage
     } else {

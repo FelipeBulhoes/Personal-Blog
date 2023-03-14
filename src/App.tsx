@@ -1,23 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import "./Global/index.css"
-import { useState } from 'react';
 import Sidebar from './Components/sidebar';
 import Profile from './Components/profile';
 import Technologies from './Components/technologies';
 import AboutMe from './Components/aboutme';
 import Projects from './Components/projects';
-import Skills from './Components/skills';
 
 function App() {
-  const [language, setLanguage] = useState("English");
-
-  function setLangPortuguese(){
-    setLanguage("Portuguese")
-  }
-
-  function setLangEnglish() {
-    setLanguage("English")
-  }
 
   const observingElement = useRef<Element[]>([])
 
@@ -41,16 +30,12 @@ function App() {
 
   return (
     <main className="App">
-        <Sidebar setLangPortuguese={setLangPortuguese} setLangEnglish={setLangEnglish} ></Sidebar>
+        <Sidebar></Sidebar>
         <div style={{margin: "100px 0 0 0"}}>
-          <Profile language={language} observingElement={observingElement}></Profile>
+          <Profile observingElement={observingElement}></Profile>
           <Technologies observingElement={observingElement}></Technologies>
-          <AboutMe language={language}></AboutMe>
-          <Projects language={language} observingElement={observingElement}></Projects>
-          <div className='work-in-progress'>
-            <img src="./work-in-progress.png" alt="" />
-          </div>
-          <Skills></Skills>
+          <AboutMe ></AboutMe>
+          <Projects></Projects>
         </div>
     </main>
   );

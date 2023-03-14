@@ -7,7 +7,10 @@ const engLanguage = {
     pandaDesc: "This application is for receipts sharing purposes. Users can easily create their accounts and share their favorite recipes with the community. Done in a week using scrum.",
     burgerDesc: "It was my second project using React, this application served to learn more about useState and the consumption of APIs with ReactJS. This project was done in two days.",
     nuDesc: "Nu Kenzie was my first react application. Served as library test and first contact. It has a simple and pleasant design. Created in two days and was also an individual project.",
-    projects: "Projects"
+    projects: "Projects",
+    detailText: "Details",
+    accessApp: "Access",
+    goBack: "Go back"
 }
 
 const ptLanguage = {
@@ -18,7 +21,10 @@ const ptLanguage = {
     pandaDesc: "Esta aplicação para fins de compartilhamento de receitas. Usuários podem facilmente criar as suas contas e compartilhar suas receitas favoritas com a comunidade. Feito em uma semana utilizando scrum.",
     burgerDesc: "Foi meu segundo projeto utilozando React, esta aplicação serviu para aprender mais sobre o useState e o consumo de APIs com ReactJS. Esse projeto foi individual e foi feito em dois dias.",
     nuDesc: "A Nu Kenzie foi a minha primeira aplicação em react. Serviu como teste da bibliotéca e primeiro contato. Possuí um design simples e agradável. Criado em dois dias e também foi um projeto individual",
-    projects: "Projetos"
+    projects: "Projetos",
+    detailText: "Ver mais",
+    accessApp: "Acessar",
+    goBack: "Voltar"
 }
 
 export {engLanguage, ptLanguage}

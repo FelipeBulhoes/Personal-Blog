@@ -5,10 +5,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import ErrorPage from './error-page';
-import PandaCooking from './routes/panda-cooking';
-import NuKenzie from './routes/nu-kenzie';
-import KenzieBurguer from './routes/kenzie-burguer';
+import PandaCooking from './routes/projects//panda-cooking';
+import NuKenzie from './routes/projects/nu-kenzie';
+import KenzieBurguer from './routes/projects/kenzie-burguer';
 import App from './App';
+import { LanguageProvider } from './contexts/languageContext';
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <LanguageProvider>
+      <RouterProvider router={router}/>
+    </LanguageProvider>
   </React.StrictMode>
 );
 

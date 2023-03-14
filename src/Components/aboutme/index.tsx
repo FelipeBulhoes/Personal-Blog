@@ -1,24 +1,24 @@
 import React, {useEffect, useRef, useState} from 'react'
 import { AboutMeDiv } from './styles'
 import { engLanguage, ptLanguage } from '../../languages';
-
-interface iAboutMeProps {
-    language: string,
-}
+import { useContext } from 'react';
+import { LanguageContext } from '../../contexts/languageContext';
 
 interface iLanguageTexts {
     aboutmeText: string,
     aboutmeValue: string
 }
 
-function AboutMe({language}:iAboutMeProps) {
+function AboutMe() {
     const [canObserve, setCanObserve] = useState<Boolean>(false)
+    const {language} = useContext(LanguageContext)
 
     //Language
     let languagePack:iLanguageTexts = {
         aboutmeText: "",
         aboutmeValue: ""
     }
+    
     if(language === "English") {
         languagePack = engLanguage
     } else {

@@ -1,30 +1,23 @@
 import React from 'react'
 import { ProjectsDiv } from './styles'
-import {SiFoodpanda} from "react-icons/si"
-import {MdOutlineFastfood} from "react-icons/md"
-import {BsBank} from "react-icons/bs"
-import { engLanguage, ptLanguage } from '../../languages'
-
-interface iProjectProps {
-    language: string,
-    observingElement: any;
-}
+import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { LanguageContext } from '../../contexts/languageContext'
+import { engLanguage, ptLanguage } from '../../languages';
 
 interface iLanguageTexts {
-    pandaDesc: string,
-    burgerDesc: string,
-    nuDesc: string,
-    projects: string
+    detailText: string,
 }
 
-function Projects({language, observingElement}:iProjectProps) {
+function Projects() {
+    const {language} = useContext(LanguageContext)
+    const navigate = useNavigate()
 
+    //Language
     let languagePack:iLanguageTexts = {
-        pandaDesc: "",
-        burgerDesc: "",
-        nuDesc: "",
-        projects: ""
+        detailText: "",
     }
+    
     if(language === "English") {
         languagePack = engLanguage
     } else {
@@ -33,61 +26,26 @@ function Projects({language, observingElement}:iProjectProps) {
 
     return (
         <ProjectsDiv>
-            <img src="./layers.png" alt="" />
-            <h2>{languagePack.projects}</h2>
-            <ul>
-                <li className='hidden proj pandacooking' ref={(el) => {observingElement.current[9] = el}}>
-                    <div>
-                        <SiFoodpanda style={{color: "black", fontSize: "80px"}} className="projectLogo"/>
-                        <img src="./github.png" alt="" onClick={() => window.open("https://github.com/Panda-Cooking/panda-cooking", '_blank')}/>
-                        <img src="./web.png" alt="" onClick={() => window.open("https://panda-cooking-ozcm12l0r-felipebulhoes.vercel.app/", '_blank')}/>
-                    </div>
-                    <div>
-                        <h3>Panda Cooking</h3>
-                        <div className='descDiv'>
-                            <p>{languagePack.pandaDesc}</p>
-                        </div>
-                        <div>
-                            <img src="./logo192.png" alt="" />
-                            <img className='bigger' src="./styled.png" alt="" />
-                            <img src="./nodejs.png" alt="" />
-                        </div>
-                    </div>
-                </li>
-                <li className='hidden proj kenzieburger' ref={(el) => {observingElement.current[10] = el}}>
-                    <div>
-                        <MdOutlineFastfood style={{color: "black", fontSize: "80px"}} className="projectLogo"/>
-                        <img src="./github.png" alt="" onClick={() => window.open("https://github.com/Kenzie-Academy-Brasil-Developers/s1-hamburgueria-da-kenzie-felipebulhoes", '_blank')}/>
-                        <img src="./web.png" alt="" onClick={() => window.open("https://s1-hamburgueria-da-kenzie.vercel.app/", '_blank')}/>
-                    </div>
-                    <div>
-                        <h3>Kenzie Burger</h3>
-                        <div className='descDiv'>
-                            <p>{languagePack.burgerDesc}</p>
-                        </div>
-                        <div>
-                            <img src="./logo192.png" alt="" />
-                            <img className='bigger' src="./styled.png" alt="" />
-                        </div>
-                    </div>
-                </li>
-                <li className='hidden proj nukenzie' ref={(el) => {observingElement.current[11] = el}}>
-                    <div>
-                        <BsBank style={{color: "black", fontSize: "80px"}} className="projectLogo"/>
-                        <img src="./github.png" alt="" onClick={() => window.open("https://github.com/FelipeBulhoes/s1-Nu-Kenzie", '_blank')}/>
-                        <img src="./web.png" alt="" onClick={() => window.open("https://s1-nu-kenzie.vercel.app/", '_blank')}/>
-                    </div>
-                    <div>
-                        <h3>Nu Kenzie</h3>
-                        <div className='descDiv'>
-                            <p>{languagePack.nuDesc}</p>
-                        </div>
-                        <div>
-                            <img src="./logo192.png" alt="" />
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <div className='card-group'>
+                <div className='card'>
+                    <img src="./placeholder.jpg" alt="" />
+                </div>
+                <div className='card'>
+                    <img src="./placeholder.jpg" alt="" />
+                </div>
+                <div className='card' onClick={() => navigate("/projects/kenzie-burguer")}>
+                    <span>{languagePack.detailText}</span>
+                    <img src="./kenzieburguer.png" alt="" />
+                </div>
+                <div className='card' onClick={() => navigate("/projects/nu-kenzie")}>
+                    <span>{languagePack.detailText}</span>
+                    <img src="./nukenzie.png" alt="" />
+                </div>
+                <div className='card' onClick={() => navigate("/projects/panda-cooking")}>
+                    <span>{languagePack.detailText}</span>
+                    <img src="./pandacooking.png" alt=""/>
+                </div>
+            </div>
         </ProjectsDiv>
     )
 }
