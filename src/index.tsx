@@ -10,12 +10,17 @@ import NuKenzie from './routes/projects/nu-kenzie';
 import KenzieBurguer from './routes/projects/kenzie-burguer';
 import App from './App';
 import { LanguageProvider } from './contexts/languageContext';
+import MetaIc from './routes/projects/meta-ic';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />
+  },
+  {
+    path: "projects/meta-ic",
+    element: <MetaIc></MetaIc>
   },
   {
     path: "projects/panda-cooking",

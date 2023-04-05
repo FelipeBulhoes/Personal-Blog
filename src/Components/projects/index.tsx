@@ -30,9 +30,6 @@ function Projects() {
                 <div className='card'>
                     <img src="./placeholder.jpg" alt="" />
                 </div>
-                <div className='card'>
-                    <img src="./placeholder.jpg" alt="" />
-                </div>
                 <div className='card' onClick={() => navigate("/projects/kenzie-burguer")}>
                     <span>{languagePack.detailText}</span>
                     <img src="./kenzieburguer.png" alt="" />
@@ -44,6 +41,10 @@ function Projects() {
                 <div className='card' onClick={() => navigate("/projects/panda-cooking")}>
                     <span>{languagePack.detailText}</span>
                     <img src="./pandacooking.png" alt=""/>
+                </div>
+                <div className='card' onClick={() => navigate("/projects/meta-ic")}>
+                    <span>{languagePack.detailText}</span>
+                    <img src="./metaic.png" alt="" />
                 </div>
             </div>
         </ProjectsDiv>

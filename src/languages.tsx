@@ -7,6 +7,9 @@ const engLanguage = {
     pandaDesc: "This application is for receipts sharing purposes. Users can easily create their accounts and share their favorite recipes with the community. Done in a week using scrum.",
     burgerDesc: "It was my second project using React, this application served to learn more about useState and the consumption of APIs with ReactJS. This project was done in two days.",
     nuDesc: "Nu Kenzie was my first react application. Served as library test and first contact. It has a simple and pleasant design. Created in two days and was also an individual project.",
+
+    metaIcDesc: "Meta IC was my first freelancer project. This is a Fullstack application specially designed for Meta Elevadores, a Brazilian elevator manufacturer company. In this application, as an admin user, you can create and edit your company inventory products, aswell as creating new users. And as a Basic user you can only consume the already existant content. I'll leave you with a non-admin account to login and see for your self.",
+
     projects: "Projects",
     detailText: "Details",
     accessApp: "Access",
@@ -21,6 +24,9 @@ const ptLanguage = {
     pandaDesc: "Esta aplicação para fins de compartilhamento de receitas. Usuários podem facilmente criar as suas contas e compartilhar suas receitas favoritas com a comunidade. Feito em uma semana utilizando scrum.",
     burgerDesc: "Foi meu segundo projeto utilozando React, esta aplicação serviu para aprender mais sobre o useState e o consumo de APIs com ReactJS. Esse projeto foi individual e foi feito em dois dias.",
     nuDesc: "A Nu Kenzie foi a minha primeira aplicação em react. Serviu como teste da bibliotéca e primeiro contato. Possuí um design simples e agradável. Criado em dois dias e também foi um projeto individual",
+
+    metaIcDesc: "Meta IC foi meu primeiro projeto freelancer. Este é um aplicativo Fullstack desenvolvido especialmente para a Meta Elevadores, empresa brasileira fabricante de elevadores. Neste aplicativo, como usuário administrador, você pode criar e editar os produtos do estoque de sua empresa, bem como criar novos usuários. E como usuário Básico você só pode consumir o conteúdo já existente. Vou deixar você com uma conta não administrativa para fazer login e ver por si mesmo.",
+
     projects: "Projetos",
     detailText: "Ver mais",
     accessApp: "Acessar",
